@@ -1,21 +1,53 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package main;
 
-/**
- *
- * @author 777
- */
+package main.java;
+
+import java.util.Scanner;
+import main.Grade;
+
+
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
+    public static void main(String[] args) {
+       
+    
+        try (Scanner sc = new Scanner(System.in)) {
+            Grade gr = new Grade();
+            Account ac = new Account();
+            Product pr = new Product();
+            
+            String transaction;
+            
+            System.out.println("Product CRUD System\n");
+            
+            do {
+                System.out.println("1. Salary");
+                System.out.println("2. Account");
+                System.out.println("3. Receipt");
+                System.out.println("Enter selection: ");
+                
+                int select = sc.nextInt();
+                
+                switch(select) {
+                    case 1:
+                        sl.getGrade();
+                        break;
+                    case 2:
+                        ac.getAccounts();
+                        break;
+                    case 3:
+                        rc.getReceipt();
+                        break;
+                    default:
+                        System.out.println("Invalid choice.");
+                }
+                System.out.print("Make another transaction? (y/n): ");
+                transaction = sc.next();
+            } while(transaction.equalsIgnoreCase("y"));
+        }
+    }
 }
+
+    
+    
+

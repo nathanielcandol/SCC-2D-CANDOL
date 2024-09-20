@@ -10,5 +10,9 @@ package main.java;
  * @author 777
  */
 class Account {
+
+    void getAccounts() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
